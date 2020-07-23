@@ -2,9 +2,13 @@
   background-color: $color-gray-242;
 }
 
+.page-footer__bottom {
+  padding-top: 39px;
+}
+
 .page-footer__logo {
   display: block;
-  margin: 40px auto 30px;
+  margin: 0 auto 31px;
   width: 128px;
 
   transition: opacity 0.3s;
