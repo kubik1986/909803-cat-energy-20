@@ -6,7 +6,7 @@
 
 .page-header__logo {
   display: block;
-  margin-left: calc((100vw - #{$phone-width}) / 2 + #{$padding-mobile});
+  margin-left: calc((100vw - #{$mobile-width}) / 2 + #{$padding-mobile});
   padding: 12px 0 15px 0;
   width: 190px;
 
