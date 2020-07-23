@@ -12,7 +12,7 @@
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="190" height="38">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--opened">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -138,16 +138,18 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__info">
           <div class="container">
-            <p class="contacts__intro">Приглашаем к сотрудничеству дилеров!</p>
-            <address>
-              ул. Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург
-            </address>
+            <div class="contacts__info-wrapper">
+              <p class="contacts__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+              <address class="contacts__address">
+                ул. Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург
+              </address>
+            </div>
           </div>
         </div>
         <div class="contacts__map" id="map"></div>
       </section>
       <div class="page-footer__bottom">
-        <div class="container">
+        <div class="page-footer__bottom-container container">
           <a class="page-footer__logo" href="index.html">
             <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
           </a>
@@ -174,7 +176,7 @@
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="copyright__text">HTML Academy</span>
-              <img src="img/icon-logo-htmlacademy.svg" width="27" height="34">
+              <img class="copyright__logo" src="img/icon-logo-htmlacademy.svg" width="27" height="34">
             </a>
           </div>
         </div>

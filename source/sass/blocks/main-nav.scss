@@ -1,0 +1,39 @@
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: none;
+  padding: 0;
+  width: 65px;
+  height: 65px;
+
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+@media (max-width: $tablet-width - 1px) {
+  .main-nav {
+    &--opened {
+      .main-nav__toggle {
+        display: block;
+        background-image: url("../img/menu-close.svg");
+        background-size: 18px 18px;
+      }
+    }
+
+    &--closed {
+      .main-nav__toggle {
+        display: block;
+        background-image: url("../img/menu-open.svg");
+        background-size: 24px 18px;
+      }
+
+      .main-nav__site-menu {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 20px;
+  width: 100%;
+
+  @include font(16px, 20px, 400);
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-white;
+
+  border: none;
+  background-color: $color-main;
+  cursor: pointer;
+
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main-darken;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+
+  &--secondary {
+    color: $color-gray-68;
+
+    background-color: $color-gray-242;
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-235;
+    }
+
+    &:active {
+      color: rgba($color-gray-68, 0.3);
+    }
+  }
+}

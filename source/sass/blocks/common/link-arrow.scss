@@ -1,0 +1,44 @@
+.link-arrow {
+  position: relative;
+
+  display: inline-block;
+  padding-right: 50px;
+
+  @include font(16px, 16px, 400);
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $color-black;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+
+    display: block;
+    width: 24px;
+    height: 11px;
+    content: "";
+
+    background-image: url("../img/right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 11px;
+    background-position: right center;
+
+    transform: translateY(-50%);
+
+    transition: all 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      right: 2px;
+
+      width: 32px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

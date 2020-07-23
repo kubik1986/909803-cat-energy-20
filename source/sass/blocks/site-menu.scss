@@ -1,0 +1,27 @@
+.site-menu {
+  @include list-reset;
+}
+
+.site-menu__link {
+  display: block;
+  padding: 22px $padding-mobile 23px $padding-mobile;
+
+  @include font(20px, 20px, 500);
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-black;
+
+  border-top: 1px solid $color-gray-230;
+
+  transition: color 0.3s;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: rgba($color-black, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba($color-black, 0.3);
+  }
+}

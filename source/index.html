@@ -12,7 +12,7 @@
         <a class="page-header__logo">
           <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="190" height="38">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--opened"><!-- main-nav--opened --><!-- main-nav--closed -->
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -33,7 +33,7 @@
     <main class="page-main">
       <section class="intro">
         <div class="container">
-          <h1 class="intro__title title">Функциональное питание для котов</h1>
+          <h1 class="intro__title title">Функциональное питание для&nbsp;котов</h1>
           <p class="intro__lead">Занялся собой? Займись котом!</p>
           <img class="intro__img" src="img/index-can-mobile@1x.png" alt="Корм для котов 'Cat Energy Pro' со вкусом курицы" width="280" height="271">
           <a class="intro__btn btn" href="form.html">Подобрать программу</a>
@@ -43,15 +43,15 @@
         <div class="container">
           <h2 class="visually-hidden">Программы питания</h2>
           <ul class="programs__list">
-            <li class="programs__item program program--slim">
-              <h3 class="program__title">Похудение</h3>
+            <li class="programs__item program program">
+              <h3 class="program__title program__title--slim">Похудение</h3>
               <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="program__link" href="#">Каталог Slim</a>
+              <a class="program__link link-arrow" href="#">Каталог Slim</a>
             </li>
-            <li class="programs__item program program--pro">
-              <h3 class="program__title">Набор массы</h3>
+            <li class="programs__item program">
+              <h3 class="program__title program__title--pro">Набор массы</h3>
               <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="program__link" href="#">Каталог Pro</a>
+              <a class="program__link link-arrow" href="#">Каталог Pro</a>
             </li>
           </ul>
         </div>
@@ -69,8 +69,7 @@
             <li class="features__item features__item--economic">
               Замените один-два приема обычной еды на наше функциональное питание.
             </li>
-            <li class="features__item features__item--
-            quickly">
+            <li class="features__item features__item--quickly">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
             </li>
           </ul>
@@ -108,7 +107,7 @@
             <div class="slider__controls">
               <button class="slider__btn slider__btn--before" type="button">Было</button>
               <div class="slider__toggle">
-                <input class="slider__toggle-value" type="number" name="slider-level" value="50" min="0" max="100">
+                <input class="slider__toggle-value visually-hidden" type="number" name="slider-level" value="50" min="0" max="100">
                 <div class="slider__toggle-range">
                   <div class="slider__toggle-grip" tabindex="0">
                     <span class="visually-hidden">Ручка переключателя было/стало</span>
@@ -127,16 +126,18 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__info contacts__info--index">
           <div class="container">
-            <p class="contacts__intro">Приглашаем к сотрудничеству дилеров!</p>
-            <address>
-              ул. Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург
-            </address>
+            <div class="contacts__info-wrapper">
+              <p class="contacts__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+              <address class="contacts__address">
+                ул. Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург
+              </address>
+            </div>
           </div>
         </div>
         <div class="contacts__map" id="map"></div>
       </section>
       <div class="page-footer__bottom">
-        <div class="container">
+        <div class="page-footer__bottom-container container">
           <a class="page-footer__logo">
             <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
           </a>
@@ -163,7 +164,7 @@
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="copyright__text">HTML Academy</span>
-              <img src="img/icon-logo-htmlacademy.svg" width="27" height="34">
+              <img class="copyright__logo" src="img/icon-logo-htmlacademy.svg" width="27" height="34">
             </a>
           </div>
         </div>
