@@ -1,0 +1,34 @@
+.intro {
+  padding-top: 27px;
+  padding-bottom: 22px;
+
+  text-align: center;
+  color: $color-white;
+
+  background-color: $color-main-darken;
+  background-image: linear-gradient(to top, $color-white 197px, transparent 197px),
+    url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom, center bottom 197px;
+}
+
+.intro__title {
+  margin: 0 auto 25px;
+  max-width: 360px;
+
+  color: inherit;
+}
+
+.intro__lead {
+  margin: 0 0 28px;
+
+  @include font(14px, 14px, 400);
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.intro__img {
+  display: block;
+  margin: 0 auto 3px;
+}

@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
     <title>Кэт энерджи - подбор программы</title>
   </head>
   <body class="page">
     <header class="page-header">
-      <div class="page-header__container">
+      <div class="container container--no-padding-mobile">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-img" src="https://via.placeholder.com/34x38" alt="Логотип Кэт энерджи">
-          <img class="page-header__logo2-img" src="https://via.placeholder.com/101x18" alt="Cat Energy">
+          <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="190" height="38">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--opened">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -31,11 +31,11 @@
       </div>
     </header>
     <main class="page-main">
-      <div class="page-main__header">
-        <h1 class="page-main__title">Подбор программы</h1>
+      <div class="page-main__header container">
+        <h1 class="page-main__title title">Подбор программы</h1>
       </div>
       <section class="program-choice">
-        <div class="program-choice__container">
+        <div class="container">
           <h2 class="visually-hidden">Форма подбора программы</h2>
           <p class="program-choice__intro">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="form" method="post" action="https://echo.htmlacademy.ru">
@@ -79,7 +79,7 @@
             </fieldset>
             <fieldset class="form__group">
               <legend>
-                <h3 class="form__title">Контактные данные (владельца кота)</h3>
+                <h3 class="form__title subtitle">Контактные данные (владельца кота)</h3>
               </legend>
               <div class="form__fields-list">
                 <label class="form__labeled-field">
@@ -96,7 +96,7 @@
             </fieldset>
             <fieldset class="form__group">
               <legend>
-                <h3 class="form__title">Комментарий</h3>
+                <h3 class="form__title subtitle">Комментарий</h3>
               </legend>
               <div class="form__fields-list">
                 <textarea class="form__input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -104,7 +104,7 @@
             </fieldset>
             <fieldset class="form__group">
               <legend>
-                <h3 class="form__title">Дополнительно</h3>
+                <h3 class="form__title subtitle">Дополнительно</h3>
               </legend>
               <div class="form__options-list form__options-list--col">
                 <label class="form__options-item">
@@ -135,41 +135,40 @@
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
-        <h2 class="viasually-hidden">Контакты</h2>
-        <div class="contacts__wrapper">
-          <div class="contacts__info">
-            <div class="contacts__info-container">
-              <p class="contacts__intro">Приглашаем к сотрудничеству дилеров!</p>
-              <address>
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__info">
+          <div class="container">
+            <div class="contacts__info-wrapper">
+              <p class="contacts__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+              <address class="contacts__address">
                 ул. Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург
               </address>
             </div>
           </div>
-          <img class="contacts__img" src="https://via.placeholder.com/320x362" alt="Адрес на карте: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
-          <div class="contats__map" id="map"></div>
         </div>
+        <div class="contacts__map" id="map"></div>
       </section>
       <div class="page-footer__bottom">
-        <div class="page-footer__bottom-container">
+        <div class="page-footer__bottom-container container">
           <a class="page-footer__logo" href="index.html">
-            <img class="page-footer__logo-img" src="https://via.placeholder.com/128x24" alt="Cat Energy">
+            <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
           </a>
           <ul class="page-footer__social social">
             <li class="social__item">
               <a class="social__link" href="#">
-                <img class="social__icon" src="https://via.placeholder.com/23x16">
+                <img class="social__icon" src="img/icon-vk.svg" width="22" height="12">
                 <span class="visually-hidden">Мы в Контакте</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <img class="social__icon" src="https://via.placeholder.com/16x16">
+                <img class="social__icon" src="img/icon-insta.svg" width="16" height="16">
                 <span class="visually-hidden">Мы в Инстаграме</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <img class="social__icon" src="https://via.placeholder.com/22x22">
+                <img class="social__icon" src="img/icon-fb.svg" width="10" height="19">
                 <span class="visually-hidden">Мы в Фейсбуке</span>
               </a>
             </li>
@@ -177,7 +176,7 @@
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="copyright__text">HTML Academy</span>
-              <img class="copyright__logo" src="https://via.placeholder.com/27x34">
+              <img class="copyright__logo" src="img/icon-logo-htmlacademy.svg" width="27" height="34">
             </a>
           </div>
         </div>

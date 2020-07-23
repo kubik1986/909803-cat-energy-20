@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include list-reset;
+}
+
+.social__item {
+  margin: 0 8px;
+}
+
+.social__link {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  &:hover,
+  &:focus {
+    .social__icon {
+      fill: $color-main;
+    }
+  }
+
+  &:active {
+    .social__icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.social__logo {
+  fill: $color-gray-102;
+
+  transition: fill 0.3s, opacity 0.3s;
+}
