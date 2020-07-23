@@ -1,1 +1,7 @@
-// Заглушка
+.products__list {
+  @include list-reset;
+}
+
+.products__item {
+  margin-bottom: -1px;
+}

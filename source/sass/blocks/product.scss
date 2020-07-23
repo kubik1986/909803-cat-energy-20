@@ -1,1 +1,119 @@
-// Заглушка
+.product {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 0 $padding-mobile 24px;
+
+  @include font(12px, 16px, 400);
+
+  border-top: 1px solid $color-gray-235;
+  border-bottom: 1px solid $color-gray-235;
+
+  &--show-more {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.product__photo {
+  margin-left: calc((100vw - #{$mobile-width}) / 2);
+  width: 140px;
+}
+
+.product__photo-img {
+  display: block;
+  width: 140px;
+  height: 144px;
+}
+
+.product__info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 50%;
+}
+
+.product__title {
+  margin-top: 0;
+  margin-bottom: 14px;
+  max-width: 100px;
+
+  @include font(16px, 20px, 400);
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $color-gray-34;
+
+  &--show-more {
+    position: relative;
+
+    margin-bottom: 8px;
+    padding-top: 80px;
+    max-width: initial;
+
+    color: $color-gray-17;
+
+    &::before {
+      position: absolute;
+      top: 25px;
+      left: 50%;
+
+      display: block;
+      width: 30px;
+      height: 30px;
+      content: "";
+
+      background-image: url("../img/plus-mobile.svg");
+
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.product__title-link {
+  color: inherit;
+
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product__lead {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__btn {
+  width: 100%;
+}
+
+.product__parameters {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.product__field {
+  padding: 0;
+  padding-right: 10px;
+  width: 55%;
+
+  vertical-align: top;
+}
+
+.product__value {
+  padding: 0;
+  width: 45%;
+
+  text-align: right;
+  vertical-align: top;
+}
