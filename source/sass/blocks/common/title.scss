@@ -2,6 +2,6 @@
   margin: 0;
 
   @include font(36px, 36px, 400);
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-secondary;
   color: $color-black;
 }

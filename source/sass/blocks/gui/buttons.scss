@@ -5,7 +5,7 @@
   width: 100%;
 
   @include font(16px, 20px, 400);
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-secondary;
   text-align: center;
   text-transform: uppercase;
   color: $color-white;

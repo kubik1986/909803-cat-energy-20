@@ -5,7 +5,7 @@
   padding-right: 50px;
 
   @include font(16px, 16px, 400);
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-secondary;
   text-transform: uppercase;
   color: $color-black;
 

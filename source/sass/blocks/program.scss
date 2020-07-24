@@ -12,7 +12,7 @@
 
 
   @include font(24px, 37px, 400);
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-secondary;
   text-transform: uppercase;
   color: $color-black;
 

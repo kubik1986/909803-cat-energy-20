@@ -7,7 +7,7 @@
   padding: 22px $padding-mobile 23px $padding-mobile;
 
   @include font(20px, 20px, 500);
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-secondary;
   text-align: center;
   text-transform: uppercase;
   color: $color-black;
