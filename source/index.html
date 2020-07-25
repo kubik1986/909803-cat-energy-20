@@ -78,7 +78,7 @@
       <section class="example">
         <div class="container">
           <h2 class="example__title title">Живой пример</h2>
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
           <div class="example__stats stats">
             <ul class="stats__list">
               <li class="stats__item">
@@ -89,33 +89,32 @@
                 <span class="stats__label">Затрачено времени</span>
                 <span class="stats__value">60 дней</span>
               </li>
-              <li class="stats__item stats__item--cost">
-                <span class="stats__label stats__label--cost">Затраты на питание:</span>
-                <span class="stats__value stats__value--cost">15&nbsp;000 руб.</span>
-              </li>
             </ul>
+            <div class="stats__cost">
+              <span class="stats__cost-labael stats__label--cost">Затраты на питание:</span>
+              <span class="stats__cost-value">15&nbsp;000 руб.</span>
+            </div>
           </div>
           <div class="example__slider slider">
             <div class="slider__images">
-              <div class="slider__img-wrapper">
-                <img class="slider__img" src="img/before-mobile@1x.png" alt="Фотография кота Бориса до похудения" width="320" height="240">
+              <div class="slider__img-wrapper slider__img-wrapper--lower">
+                <img class="example__slider-img-lower slider__img slider__img--lower" src="img/before-mobile@1x.png" alt="Фотография кота Бориса до похудения" width="320" height="240">
               </div>
-              <div class="slider__img-wrapper">
-                <img class="slider__img" src="img/after-mobile@1x.png" alt="Фотография кота Бориса после похудения" width="320" height="240">
+              <div class="slider__img-wrapper slider__img-wrapper--upper">
+                <img class="example__slider-img-upper slider__img slider__img--upper" src="img/after-mobile@1x.png" alt="Фотография кота Бориса после похудения" width="320" height="240">
               </div>
             </div>
             <div class="slider__controls">
-              <button class="slider__btn slider__btn--before" type="button">Было</button>
+              <input class="visually-hidden js-slider-input" type="number" name="slider-level" value="50" min="0" max="100">
+              <button class="slider__btn js-slider-btn-before" type="button">Было</button>
               <div class="slider__toggle">
-                <input class="slider__toggle-value visually-hidden" type="number" name="slider-level" value="50" min="0" max="100">
                 <div class="slider__toggle-range">
-                  <div class="slider__toggle-grip" tabindex="0">
+                  <div class="slider__toggle-grip js-slider-grip" tabindex="0">
                     <span class="visually-hidden">Ручка переключателя было/стало</span>
                   </div>
-                  <div class="slider__toggle-level"></div>
                 </div>
               </div>
-              <button class="slider__btn slider__btn--after" type="button">Стало</button>
+              <button class="slider__btn js-slider-btn-after" type="button">Стало</button>
             </div>
           </div>
         </div>
