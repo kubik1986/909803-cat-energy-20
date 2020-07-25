@@ -2,6 +2,8 @@
   @include list-reset;
 }
 
-.programs__item:not(:last-child) {
-  margin-bottom: 20px;
+.programs__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
