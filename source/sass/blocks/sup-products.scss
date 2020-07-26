@@ -1,1 +1,19 @@
-// Заглушка
+.sup-products {
+  padding-top: 28px;
+  padding-bottom: 35px;
+}
+
+.sup-products__title {
+  margin-bottom: 33px;
+}
+
+.sup-products__list {
+  @include list-reset;
+
+  margin-bottom: 40px;
+}
+
+.sup-products__item {
+  margin-bottom: -1px;
+}
+

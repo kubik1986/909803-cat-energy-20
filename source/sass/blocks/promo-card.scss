@@ -1,1 +1,40 @@
-// Заглушка
+.promo-card {
+  position: relative;
+
+  display: block;
+  margin: 0 auto;
+  padding: 186px 55px 43px;
+  width: 280px;
+  min-height: 289px;
+
+  @include font (16px, 20px, 400);
+  text-align: center;
+  color: $color-white;
+
+  background-color: $color-main;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+
+  &::before {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+
+    display: block;
+    width: 56px;
+    height: 60px;
+    content: "";
+
+    background-image: url("../img/gift.svg");
+    background-repeat: no-repeat;
+
+    transform: translateX(-50%);
+
+    transition: all 0.3s;
+  }
+}
+
+.promo-card__title {
+  margin: 0;
+
+  font: inherit;
+}
