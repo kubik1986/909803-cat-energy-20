@@ -1,5 +1,5 @@
 .sup-products {
-  padding-top: 28px;
+  padding-top: 27px;
   padding-bottom: 35px;
 }
 
@@ -10,10 +10,12 @@
 .sup-products__list {
   @include list-reset;
 
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .sup-products__item {
-  margin-bottom: -1px;
+  + .sup-products__item {
+    margin-top: -1px;
+  }
 }
 
