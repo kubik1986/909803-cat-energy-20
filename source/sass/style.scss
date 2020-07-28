@@ -3,9 +3,6 @@
 @import "general/normalize.scss";
 @import "general/fonts.scss";
 @import "general/global.scss";
-@import "blocks/gui/buttons.scss";
-@import "blocks/gui/form.scss";
-@import "blocks/gui/modal-overlay.scss";
 @import "blocks/common/visually-hidden.scss";
 @import "blocks/common/page.scss";
 @import "blocks/common/container.scss";
@@ -13,6 +10,10 @@
 @import "blocks/common/subtitle.scss";
 @import "blocks/common/link-arrow.scss";
 @import "blocks/common/social.scss";
+@import "blocks/gui/buttons.scss";
+@import "blocks/gui/form.scss";
+@import "blocks/gui/modal-overlay.scss";
+@import "blocks/gui/slider.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-menu.scss";
@@ -23,7 +24,6 @@
 @import "blocks/features.scss";
 @import "blocks/example.scss";
 @import "blocks/stats.scss";
-@import "blocks/slider.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/contacts.scss";
 @import "blocks/copyright.scss";

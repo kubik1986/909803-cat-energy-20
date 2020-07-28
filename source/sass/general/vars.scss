@@ -1,3 +1,7 @@
+// шрифты
+$font-main: "Arial", "Helvetica", sans-serif;
+$font-secondary: "Oswald", "Arial", sans-serif;
+
 
 // colors
 
@@ -7,14 +11,18 @@ $color-gray-17: #111111;
 $color-gray-34: #222222;
 $color-gray-68: #444444;
 $color-gray-102: #666666;
+$color-gray-186: #bababa;
+$color-gray-205: #cdcdcd;
 $color-gray-217: #d9d9d9;
 $color-gray-230: #e6e6e6;
+$color-gray-231: #e7e7e7;
 $color-gray-234: #eaeaea;
 $color-gray-235: #ebebeb;
 $color-gray-242: #f2f2f2;
 
 $color-main: #68b738;
 $color-main-darken: #5eaa2f;
+$color-error: #ff8282;
 
 // dimensions
 $mobile-width: 320px;

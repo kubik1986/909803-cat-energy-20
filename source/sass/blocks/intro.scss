@@ -23,7 +23,7 @@
   margin: 0 0 28px;
 
   @include font(14px, 14px, 400);
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-secondary;
   text-align: center;
   text-transform: uppercase;
 }

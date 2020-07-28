@@ -1,1 +1,58 @@
-// Заглушка
+.stats__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include list-reset;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 18px;
+  width: calc(50% - 16px);
+}
+
+.stats__label {
+  align-self: center;
+  order: 1;
+
+  margin: -8px 15px 0;
+  padding: 0 15px;
+  max-width: 85px;
+
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: lowercase;
+
+  background-color: $color-gray-234;
+}
+
+.stats__value {
+  display: block;
+  padding: 14px 20px 16px;
+
+  @include font(24px, 24px, 400);
+  font-family: $font-secondary;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-black;
+
+  border: 1px solid $color-gray-205;
+  border-radius: 3px;
+}
+
+.stats__cost {
+  @include font(14px, 20px, 400);
+  font-family: $font-secondary;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+.stats__cost-value {
+  margin-left: 0.15em;
+}

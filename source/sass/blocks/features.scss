@@ -18,6 +18,10 @@
   padding: 3px 0 0 80px;
   min-height: 60px;
 
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -58,8 +62,4 @@
       background-image: url("../img/advantage-clock@1x.png");
     }
   }
-}
-
-.features__item:not(:last-child) {
-  margin-bottom: 20px;
 }

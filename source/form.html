@@ -40,9 +40,7 @@
           <p class="program-choice__intro">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="form" method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="form__group form__group--no-title">
-              <legend>
-                <h3 class="visually-hidden">Данные кота</h3>
-              </legend>
+              <legend class="visually-hidden">Данные кота</legend>
               <div class="form__fields-list">
                 <label class="form__labeled-field">
                   <span class="form__field-name">Имя:*</span>
@@ -59,9 +57,7 @@
               </div>
             </fieldset>
             <fieldset class="form__group form__group--no-title form__group--bordered">
-              <legend>
-                <h3 class="visually-hidden">Программа питания</h3>
-              </legend>
+              <legend class="visually-hidden">Программа питания</legend>
               <div class="form__options-list">
                 <label class="form__options-item">
                   <input class="visually-hidden form__control" type="radio" name="program" value="slim" checked>
@@ -78,56 +74,50 @@
               </div>
             </fieldset>
             <fieldset class="form__group">
-              <legend>
-                <h3 class="form__title subtitle">Контактные данные (владельца кота)</h3>
-              </legend>
+              <legend class="form__title subtitle">Контактные данные<span class="subtitle__bottom">(владельца кота)</span></legend>
               <div class="form__fields-list">
                 <label class="form__labeled-field">
-                  <span class="form__field-name">E-mail:*</span>
+                  <span class="form__field-name form__field-name--icon">E-mail:*</span>
                   <input class="form__input form__input--icon" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                   <svg class="form__icon" width="20" height="14" focusable="false" aria-hidden="true"></svg>
                 </label>
                 <label class="form__labeled-field">
-                  <span class="form__field-name">Телефон:*</span>
+                  <span class="form__field-name form__field-name--icon">Телефон:*</span>
                   <input class="form__input form__input--icon" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
                   <svg class="form__icon" width="20" height="20" focusable="false" aria-hidden="true"></svg>
                 </label>
               </div>
             </fieldset>
-            <fieldset class="form__group">
-              <legend>
-                <h3 class="form__title subtitle">Комментарий</h3>
-              </legend>
+            <div class="form__group">
+              <label class="form__title subtitle" for="comment">Комментарий</label>
               <div class="form__fields-list">
-                <textarea class="form__input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+                <textarea class="form__input form__input--textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
-            </fieldset>
+            </div>
             <fieldset class="form__group">
-              <legend>
-                <h3 class="form__title subtitle">Дополнительно</h3>
-              </legend>
+              <legend class="form__title subtitle">Дополнительно</legend>
               <div class="form__options-list form__options-list--col">
                 <label class="form__options-item">
                   <input class="visually-hidden form__control" type="checkbox" name="extra" value="sweetener" checked>
-                  <span class="form__option form__option--radio">Сахарозаменитель</span>
+                  <span class="form__option form__option--checkbox">Сахарозаменитель</span>
                 </label>
                 <label class="form__options-item">
                   <input class="visually-hidden form__control" type="checkbox" name="extra" value="pure-water">
-                  <span class="form__option form__option--radio">Питьевая вода</span>
+                  <span class="form__option form__option--checkbox">Питьевая вода</span>
                 </label>
                 <label class="form__options-item">
                   <input class="visually-hidden form__control" type="checkbox" name="extra" value="milk">
-                  <span class="form__option form__option--radio">Молоко</span>
+                  <span class="form__option form__option--checkbox">Молоко</span>
                 </label>
                 <label class="form__options-item">
                   <input class="visually-hidden form__control" type="checkbox" name="extra" value="vitamins">
-                  <span class="form__option form__option--radio">Витамины</span>
+                  <span class="form__option form__option--checkbox">Витамины</span>
                 </label>
               </div>
             </fieldset>
             <p class="form__submit">
               <button class="form__submit-btn btn" type="submit">Отправить заявку</button>
-              <span class="form__remark">* — Обязательные поля</span>
+              <small class="form__remark">* — Обязательные поля</small>
             </p>
           </form>
         </div>

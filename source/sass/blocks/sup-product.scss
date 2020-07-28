@@ -1,1 +1,53 @@
-// Заглушка
+.sup-product {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 13px 0 17px;
+
+  @include font(14px, 14px, 400);
+
+  border-top: 1px solid $color-gray-205;
+  border-bottom: 1px solid $color-gray-205;
+}
+
+.sup-product__title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  width: 100%;
+
+  @include font(16px, 16px, 400);
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  color: $color-gray-34;
+}
+
+.sup-product__title-link {
+  color: inherit;
+
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.sup-product__amount {
+  padding-right: 15px;
+  width: 70%;
+}
+
+.sup-product__price {
+  width: 30%;
+
+  text-align: right;
+}
+
+.sup-product__btn {
+  margin-top: 15px;
+}

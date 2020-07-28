@@ -1,1 +1,14 @@
-// Заглушка
+.program-choice {
+  padding-bottom: 32px;
+}
+
+.program-choice__intro {
+  margin: 0;
+  margin-bottom: 38px;
+  width: 240px;
+
+  font-size: 14px;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  color: $color-black;
+}
