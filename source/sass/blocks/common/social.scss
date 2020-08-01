@@ -20,6 +20,10 @@
   width: 40px;
   height: 40px;
 
+  &--narrow {
+    width: 25px;
+  }
+
   &:hover,
   &:focus {
     .social__icon {
@@ -34,8 +38,42 @@
   }
 }
 
-.social__logo {
+.social__icon {
   fill: $color-gray-102;
 
   transition: fill 0.3s, opacity 0.3s;
+
+  &--vk {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--in {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__icon {
+    &--vk {
+      width: 29px;
+      height: 17px;
+    }
+
+    &--in {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
 }

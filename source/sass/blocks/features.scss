@@ -35,8 +35,6 @@
     background-color: $color-main;
     background-repeat: no-repeat;
     background-position: center center;
-
-    transition: all 0.3s;
   }
 
   &--healthy {
@@ -60,6 +58,86 @@
   &--quickly {
     &::before {
       background-image: url("../img/advantage-clock@1x.png");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding-top: 45px;
+    padding-bottom: 46px;
+  }
+
+  .features__title {
+    margin-bottom: 32px;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 37px;
+
+    counter-reset: feature-number;
+  }
+
+  .features__item {
+    padding: 152px 75px 40px 0;
+    min-height: 280px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      top: 40px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 78px;
+      z-index: -1;
+
+      display: block;
+      min-width: 130px;
+      height: 280px;
+      content: counter(feature-number);
+      counter-increment: feature-number;
+
+      font-family: $font-secondary;
+      font-size: 280px;
+      line-height: 280px;
+      color: $color-gray-242;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .features {
+    border-bottom: 1px solid $color-gray-230;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding-top: 72px;
+    padding-bottom: 15px;
+  }
+
+  .features__list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+
+  .features__item {
+    padding-right: 0;
+
+    &::after {
+      right: 0;
     }
   }
 }

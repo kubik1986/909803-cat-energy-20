@@ -1,10 +1,9 @@
-// шрифты
+// fonts
 $font-main: "Arial", "Helvetica", sans-serif;
 $font-secondary: "Oswald", "Arial", sans-serif;
 
 
 // colors
-
 $color-white: #ffffff;
 $color-black: #000000;
 $color-gray-17: #111111;
@@ -14,6 +13,7 @@ $color-gray-102: #666666;
 $color-gray-186: #bababa;
 $color-gray-205: #cdcdcd;
 $color-gray-217: #d9d9d9;
+$color-gray-220: #dcdcdc;
 $color-gray-230: #e6e6e6;
 $color-gray-231: #e7e7e7;
 $color-gray-234: #eaeaea;
@@ -22,15 +22,32 @@ $color-gray-242: #f2f2f2;
 
 $color-main: #68b738;
 $color-main-darken: #5eaa2f;
+$color-photo-background-right: #63a73a;
+$color-photo-background-left: #65a93c;
 $color-error: #ff8282;
+$map-background-color: #fdf7f0;
 
 // dimensions
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1300px;
+$tablet-max-width: 1100px;
+$desktop-width: 1440px;
 
 $padding-mobile: 20px;
 $padding-tablet: 30px;
-$padding-desktop: 40px;
+$padding-desktop: 110px;
+
+$intro-extra-margin-tablet: 87px;
+$intro-extra-margin-desktop: 80px;
 
 $retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
+
+$slider-height-mobile: 320px;
+$slider-height-tablet: 631px;
+$slider-bg-strip-height-tablet: 169px;
+$slider-bg-strip-height-desktop: 190px;
+$grip-width-mobile: 35px;
+$grip-height-mobile: 6px;
+$grip-width-tablet: 34px;
+$grip-height-tablet: 34px;
+

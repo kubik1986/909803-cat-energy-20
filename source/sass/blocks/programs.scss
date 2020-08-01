@@ -7,3 +7,26 @@
     margin-bottom: 20px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .programs__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 60px;
+  }
+
+  .programs__item {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
