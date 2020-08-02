@@ -7,8 +7,8 @@
     <title>Кэт энерджи</title>
   </head>
   <body class="page">
-    <header class="page-header">
-      <div class="container container--no-padding-mobile">
+    <header class="page-header page-header--index">
+      <div class="page-header__container container container--no-padding-mobile">
         <a class="page-header__logo">
           <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип Кэт энерджи" width="190" height="38">
         </a>
@@ -16,7 +16,7 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <ul class="main-nav__site-menu site-menu">
+          <ul class="main-nav__site-menu site-menu site-menu--index">
             <li class="site-menu__item">
               <a class="site-menu__link site-menu__link--active">Главная</a>
             </li>
@@ -32,24 +32,24 @@
     </header>
     <main class="page-main">
       <section class="intro">
-        <div class="container">
+        <div class="intro__container container">
           <h1 class="intro__title title">Функциональное питание для&nbsp;котов</h1>
           <p class="intro__lead">Занялся собой? Займись котом!</p>
           <img class="intro__img" src="img/index-can-mobile@1x.png" alt="Корм для котов 'Cat Energy Pro' со вкусом курицы" width="280" height="271">
-          <a class="intro__btn btn" href="form.html">Подобрать программу</a>
+          <a class="intro__btn btn btn--big" href="form.html">Подобрать программу</a>
         </div>
       </section>
       <section class="programs">
         <div class="container">
           <h2 class="visually-hidden">Программы питания</h2>
           <ul class="programs__list">
-            <li class="programs__item program program">
-              <h3 class="program__title program__title--slim">Похудение</h3>
+            <li class="programs__item program program--slim">
+              <h3 class="program__title">Похудение</h3>
               <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="program__link link-arrow" href="#">Каталог Slim</a>
             </li>
-            <li class="programs__item program">
-              <h3 class="program__title program__title--pro">Набор массы</h3>
+            <li class="programs__item program program--pro">
+              <h3 class="program__title">Набор массы</h3>
               <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="program__link link-arrow" href="#">Каталог Pro</a>
             </li>
@@ -70,29 +70,31 @@
               Замените один-два приема обычной еды на наше функциональное питание.
             </li>
             <li class="features__item features__item--quickly">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
             </li>
           </ul>
         </div>
       </section>
       <section class="example">
-        <div class="container">
-          <h2 class="example__title title">Живой пример</h2>
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <div class="example__stats stats">
-            <ul class="stats__list">
-              <li class="stats__item">
-                <span class="stats__label">Снижение веса</span>
-                <span class="stats__value">5 кг</span>
-              </li>
-              <li class="stats__item">
-                <span class="stats__label">Затрачено времени</span>
-                <span class="stats__value">60 дней</span>
-              </li>
-            </ul>
-            <div class="stats__cost">
-              <span class="stats__cost-label">Затраты на питание:</span>
-              <span class="stats__cost-value">15&nbsp;000 руб.</span>
+        <div class="example__container container">
+          <div class="example__text-wrapper">
+            <h2 class="example__title title">Живой пример</h2>
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день. </p>
+            <div class="example__stats stats">
+              <ul class="stats__list">
+                <li class="stats__item">
+                  <span class="stats__label">Снижение веса</span>
+                  <span class="stats__value">5 кг</span>
+                </li>
+                <li class="stats__item">
+                  <span class="stats__label">Затрачено времени</span>
+                  <span class="stats__value">60 дней</span>
+                </li>
+              </ul>
+              <div class="stats__cost">
+                <span class="stats__cost-label">Затраты на питание:</span>
+                <span class="stats__cost-value">15&nbsp;000 руб.</span>
+              </div>
             </div>
           </div>
           <div class="example__slider slider">
@@ -105,11 +107,11 @@
               </div>
             </div>
             <div class="slider__controls">
-              <input class="visually-hidden js-slider-input" type="number" name="slider-level" value="50" min="0" max="100">
+              <input class="slider__input js-slider-input" type="number" name="slider-level" value="50" min="0" max="100">
               <button class="slider__btn js-slider-btn-before" type="button">Было</button>
-              <div class="slider__toggle">
-                <div class="slider__toggle-range">
-                  <div class="slider__toggle-grip js-slider-grip" tabindex="0">
+              <div class="slider__range">
+                <div class="slider__inner-range">
+                  <div class="slider__grip js-slider-grip" tabindex="0">
                     <span class="visually-hidden">Ручка переключателя было/стало</span>
                   </div>
                 </div>
@@ -128,7 +130,7 @@
             <div class="contacts__info-wrapper">
               <p class="contacts__intro">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
               <address class="contacts__address">
-                ул. Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург
+                ул. Большая Конюшенная, д.&nbsp;19/8 <span class="contacts__address-city">Санкт-Петербург</span>
               </address>
             </div>
           </div>
@@ -143,19 +145,19 @@
           <ul class="page-footer__social social">
             <li class="social__item">
               <a class="social__link" href="#">
-                <img class="social__icon" src="img/icon-vk.svg" width="22" height="12">
+                <img class="social__icon social__icon--vk" src="img/icon-vk.svg" width="22" height="12">
                 <span class="visually-hidden">Мы в Контакте</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
-                <img class="social__icon" src="img/icon-insta.svg" width="16" height="16">
+                <img class="social__icon social__icon--in" src="img/icon-insta.svg" width="16" height="16">
                 <span class="visually-hidden">Мы в Инстаграме</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="#">
-                <img class="social__icon" src="img/icon-fb.svg" width="10" height="19">
+              <a class="social__link social__link--narrow" href="#">
+                <img class="social__icon social__icon--fb" src="img/icon-fb.svg" width="10" height="19">
                 <span class="visually-hidden">Мы в Фейсбуке</span>
               </a>
             </li>

@@ -2,3 +2,10 @@
   padding-top: 27px;
   padding-bottom: 38px;
 }
+
+@media (min-width: $tablet-width) {
+  .page-main__header {
+    padding-top: 35px;
+    padding-bottom: 54px;
+  }
+}

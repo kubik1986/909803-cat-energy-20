@@ -37,3 +37,15 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: calc(100% - 173px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: calc(100% - 202px);
+  }
+}

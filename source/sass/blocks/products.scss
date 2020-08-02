@@ -6,8 +6,43 @@
   @include list-reset;
 }
 
-.products__item {
-  + .products__item {
-    margin-top: -1px;
+.products__item:not(:last-child) {
+  margin-bottom: -1px;
+}
+
+@media (min-width: $tablet-width) {
+  .products {
+    padding-top: 29px;
+  }
+
+  .products__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+    column-gap: 60px;
+    row-gap: 60px;
+  }
+
+  .products__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .products__item--show-more {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products__list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
+
+  .products__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .products__item--show-more {
+    margin-top: 80px;
   }
 }

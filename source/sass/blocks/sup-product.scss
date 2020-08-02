@@ -50,4 +50,81 @@
 
 .sup-product__btn {
   margin-top: 15px;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .sup-product {
+    align-items: flex-start;
+
+    padding: 25px 37px 27px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    border-left: 1px solid $color-gray-205;
+    border-right: 1px solid $color-gray-205;
+  }
+
+  .sup-product__title {
+    margin-bottom: 0;
+    padding-right: 15px;
+    width: 47.5%;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .sup-product__amount {
+    margin-top: 3px;
+    width: 40%;
+
+    text-align: right;
+  }
+
+  .sup-product__price {
+    margin-top: 3px;
+    width: 12.5%;
+
+    text-align: right;
+  }
+
+  .sup-product__btn {
+    margin-top: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sup-product {
+    padding: 15px 0 16px;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  .sup-product__title {
+    margin-top: 11px;
+    padding-right: 15px;
+    width: 36.3%;
+  }
+
+  .sup-product__amount {
+    margin-top: 13px;
+    width: 27.1%;
+
+    text-align: left;
+  }
+
+  .sup-product__price {
+    margin-top: 13px;
+    padding-right: 10px;
+    width: 9.2%;
+
+    text-align: left;
+  }
+
+  .sup-product__btn {
+    margin-top: 0;
+    width: 27.4%;
+  }
 }

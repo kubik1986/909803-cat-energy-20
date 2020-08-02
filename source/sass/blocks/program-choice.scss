@@ -7,8 +7,35 @@
   margin-bottom: 38px;
   width: 240px;
 
-  font-size: 14px;
+  @include font(14px, 18px, 400);
   font-family: $font-secondary;
   text-transform: uppercase;
   color: $color-black;
+}
+
+@media (min-width: $tablet-width) {
+  .program-choice {
+    padding-bottom: 71px;
+  }
+
+  .program-choice__intro {
+    margin-bottom: 65px;
+    width: 330px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .program-choice__container {
+    padding-left: $form-padding-tablet;
+    padding-right: $form-padding-tablet;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-choice {
+    padding-bottom: 81px;
+  }
 }

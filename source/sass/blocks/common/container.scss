@@ -13,3 +13,24 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .container {
+    max-width: $tablet-max-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+    max-width: $desktop-width;
+  }
+}

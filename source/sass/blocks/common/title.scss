@@ -5,3 +5,10 @@
   font-family: $font-secondary;
   color: $color-black;
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

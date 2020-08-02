@@ -1,6 +1,5 @@
 .example {
   padding-top: 30px;
-  padding-bottom: 30px;
 
   background-color: $color-gray-234;
 }
@@ -14,21 +13,120 @@
   margin-bottom: 25px;
 }
 
-.example__stats {
+.example__text-wrapper {
+  position: relative;
+
   margin-bottom: 42px;
 }
 
 .example__slider {
-  margin-left: -$padding-mobile;
   margin-right: -$padding-mobile;
+  margin-left: -$padding-mobile;
 }
 
-.example__slider-img-lower {
-  top: -8px;
-  left: 0;
+@media (max-width: $tablet-width - 1px) {
+  .example__slider-img-lower {
+    top: -8px;
+    left: 0;
+  }
+
+  .example__slider-img-upper {
+    top: 2px;
+    right: 6px;
+  }
 }
 
-.example__slider-img-upper {
-  top: 2px;
-  right: 6px;
+@media (min-width: $tablet-width) {
+  .example {
+    position: relative;
+    padding-top: 43px;
+
+    background-color: $color-white;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      display: block;
+      width: 100%;
+      height: $slider-height-tablet - $slider-bg-strip-height-tablet;
+      content: "";
+
+      background-image: linear-gradient(to right, $color-gray-242 50%, $color-gray-234 50%);
+    }
+  }
+
+  .example__title {
+    margin-bottom: 64px;
+  }
+
+  .example__description {
+    margin-bottom: 53px;
+  }
+
+  .example__text-wrapper {
+    margin-bottom: 55px;
+  }
+
+  .example__slider {
+    margin-right: -$padding-tablet;
+    margin-left: -$padding-tablet;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .example__slider-img-lower {
+    left: 7px;
+  }
+
+  .example__slider-img-upper {
+    right: -7px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    padding-top: 0;
+
+    &::before {
+      top: $slider-bg-strip-height-desktop;
+      height: auto;
+    }
+  }
+
+  .example__container {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 0;
+  }
+
+  .example__text-wrapper {
+    margin-bottom: 0;
+    padding-top: 54px;
+    width: 436px;
+  }
+
+  .example__title {
+    margin-bottom: 147px;
+  }
+
+  .example__description {
+    margin-bottom: 68px;
+  }
+
+  .example__slider {
+    margin-left: 0;
+    margin-right: -60px;
+    width: 690px;
+  }
+
+  .example__slider-img-lower {
+    left: -20px;
+  }
+
+  .example__slider-img-upper {
+    right: 20px;
+  }
 }

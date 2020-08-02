@@ -25,7 +25,16 @@
 }
 
 .copyright__logo {
+  width: 27px;
+  height: 34px;
+
   fill: $color-gray-102;
 
   transition: fill 0.3s, opacity 0.3s;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__link {
+    width: 163px;
+  }
 }
