@@ -24,6 +24,11 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  .subtitle__bottom {
+    display: inline;
+    margin-left: 0.2em;
+  }
 }
 
 @media (min-width: $desktop-width) {
