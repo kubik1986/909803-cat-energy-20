@@ -53,7 +53,7 @@
       &::after {
         position: absolute;
         left: 0;
-        bottom: -10px;
+        bottom: -8px;
 
         display: block;
         width: 100%;
@@ -79,6 +79,15 @@
           &::after {
             background-color: $color-white;
           }
+        }
+
+        &[href]:hover,
+        &[href]:focus {
+          color: rgba($color-white, 0.6);
+        }
+
+        &[href]:active {
+          color: rgba($color-white, 0.3);
         }
       }
     }
