@@ -59,6 +59,7 @@
     max-width: 100%;
 
     &--index {
+      padding-bottom: 27px;
       background-image: linear-gradient(to right, transparent 50.1%, $color-photo-background-left 50.1%);
 
       &::before {
