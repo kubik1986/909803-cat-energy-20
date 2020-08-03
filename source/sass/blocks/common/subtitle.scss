@@ -1,7 +1,9 @@
 .subtitle {
+  position: relative;
+
   display: inline-block;
   margin: 0;
-  padding-right: 22px;
+  padding-right: $subtitle-padding-mobile;
 
   @include font(24px, 26px, 400);
   font-family: $font-secondary;
@@ -9,7 +11,28 @@
   vertical-align: top;
   text-transform: none;
 
-  background-color: $color-white;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 16px;
+    z-index: -1;
+
+    display: block;
+    width: 100vw;
+    height: 2px;
+    content: "";
+
+    background-color: $color-main;
+  }
+
+  &::before {
+    left: 100%;
+  }
+
+  &::after {
+    right: 100%;
+    display: none;
+  }
 }
 
 .subtitle__bottom {
@@ -18,11 +41,20 @@
 
 @media (min-width: $tablet-width) {
   .subtitle {
-    padding-right: 38px;
-    padding-left: 38px;
+    padding-right: $subtitle-padding-tablet;
+    padding-left: $subtitle-padding-tablet;
 
     font-size: 36px;
     line-height: 36px;
+
+    &::before,
+    &::after {
+      top: 22px;
+    }
+
+    &::after {
+      display: block;
+    }
   }
 
   .subtitle__bottom {
@@ -33,8 +65,8 @@
 
 @media (min-width: $desktop-width) {
   .subtitle {
-    margin-left: -40px;
-    padding-right: 40px;
-    padding-left: 40px;
+    margin-left: -$subtitle-padding-desktop;
+    padding-right: $subtitle-padding-desktop;
+    padding-left: $subtitle-padding-desktop;
   }
 }
