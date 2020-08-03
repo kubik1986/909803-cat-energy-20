@@ -10,13 +10,19 @@
   margin-bottom: -1px;
 }
 
+@media (min-width: 2 * $mobile-width) {
+  .products__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (min-width: $tablet-width) {
   .products {
     padding-top: 29px;
   }
 
   .products__list {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
     column-gap: 60px;
     row-gap: 60px;
