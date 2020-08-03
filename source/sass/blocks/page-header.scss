@@ -59,6 +59,7 @@
     max-width: 100%;
 
     &--index {
+      padding-bottom: 27px;
       background-image: linear-gradient(to right, transparent 50.1%, $color-photo-background-left 50.1%);
 
       &::before {
@@ -74,7 +75,7 @@
         background-color: $color-photo-background-left;
         background-image: url("../img/index-background-desktop@1x.jpg");
         background-repeat: no-repeat;
-        background-position: right -2px;
+        background-position: left -2px;
       }
 
       .page-header__container {
@@ -90,5 +91,15 @@
   .page-header__logo-img {
     width: 202px;
     height: 60px;
+  }
+}
+
+@media (min-width: $layout-width) {
+  .page-header {
+    &--index {
+      &::before {
+        background-position: right -2px;
+      }
+    }
   }
 }
