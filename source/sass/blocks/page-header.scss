@@ -44,18 +44,18 @@
   .page-header__logo {
     margin-left: 0;
     padding: 0;
-    width: 173px;
+    width: 174px;
   }
 
   .page-header__logo-img {
-    width: 173px;
-    height: 58px;
+    width: 174px;
+    height: 52px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding: 54px 0 40px;
+    padding: 54px 0 34px;
     max-width: 100%;
 
     &--index {
