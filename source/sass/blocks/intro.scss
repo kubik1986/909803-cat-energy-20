@@ -12,7 +12,14 @@
     linear-gradient(to top, $color-white 197px, transparent 197px),
     linear-gradient(to right, $color-photo-background-left 50%, $color-photo-background-right 50%);
   background-repeat: no-repeat;
-  background-position: center bottom 197px, center, bottom;
+  background-position: center bottom 197px, center, center;
+  background-size: 320px, auto, auto;
+
+  @media #{$retina} {
+    background-image: url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to top, $color-white 197px, transparent 197px),
+      linear-gradient(to right, $color-photo-background-left 50%, $color-photo-background-right 50%);
+  }
 }
 
 .intro__container {
@@ -80,10 +87,6 @@
   }
 
   .intro__img {
-    align-self: center;
-    order: 1;
-    z-index: -1;
-
     margin: 0;
     margin-top: -83px;
     width: 708px;
@@ -96,6 +99,15 @@
     max-width: 420px;
   }
 }
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .intro__img-picture {
+    align-self: center;
+    order: 1;
+    z-index: -1;
+  }
+}
+
 
 @media (min-width: $desktop-width) {
   .intro {

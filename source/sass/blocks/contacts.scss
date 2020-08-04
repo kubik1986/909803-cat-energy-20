@@ -44,7 +44,12 @@
   background-color: $map-background-color;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
+  background-size: cover;
+
+  @media #{$retina} {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
 
   &::before {
     position: absolute;
@@ -95,6 +100,10 @@
 
     background-image: url("../img/bg-map-tablet@1x.png");
 
+    @media #{$retina} {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+
     &::before {
       width: 124px;
       height: 106px;
@@ -133,8 +142,22 @@
 
     background-image: url("../img/bg-map-desktop@1x.png");
 
+    @media #{$retina} {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
+
     &::before {
-      transform: translate(275px, -50%);
+      left: auto;
+      right: calc(250px + (100vw - #{$desktop-width}) / 2);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (min-width: $layout-width) {
+  .contacts__map {
+    &::before {
+      right: calc(320px + (100vw - #{$layout-width}) / 3.6);
     }
   }
 }
