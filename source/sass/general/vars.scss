@@ -41,8 +41,6 @@ $padding-desktop: 40px;
 $intro-extra-margin-tablet: 87px;
 $intro-extra-margin-desktop: 80px;
 
-$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
-
 $slider-height-mobile: 320px;
 $slider-height-tablet: 631px;
 $slider-bg-strip-height-tablet: 169px;
@@ -59,3 +57,5 @@ $form-padding-tablet: 68px;
 $subtitle-padding-mobile: 22px;
 $subtitle-padding-tablet: 38px;
 $subtitle-padding-desktop: 40px;
+
+$retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);

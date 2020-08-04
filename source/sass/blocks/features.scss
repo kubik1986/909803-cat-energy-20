@@ -34,30 +34,47 @@
 
     background-color: $color-main;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+    background-size: 50px 50px;
   }
 
   &--healthy {
     &::before {
       background-image: url("../img/advantage-leaf@1x.png");
+
+      @media #{$retina} {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
     }
   }
 
   &--simply {
     &::before {
       background-image: url("../img/advantage-powder@1x.png");
+
+      @media #{$retina} {
+        background-image: url("../img/advantage-powder@2x.png");
+      }
     }
   }
 
   &--economic {
     &::before {
       background-image: url("../img/advantage-dining@1x.png");
+
+      @media #{$retina} {
+        background-image: url("../img/advantage-dining@2x.png");
+      }
     }
   }
 
   &--quickly {
     &::before {
       background-image: url("../img/advantage-clock@1x.png");
+
+      @media #{$retina} {
+        background-image: url("../img/advantage-clock@2x.png");
+      }
     }
   }
 }
