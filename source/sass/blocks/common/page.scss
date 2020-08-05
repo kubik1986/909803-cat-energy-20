@@ -1,7 +1,11 @@
 .page {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
   min-width: $mobile-width;
+  min-height: 100%;
 
   font-family: $font-main;
 
