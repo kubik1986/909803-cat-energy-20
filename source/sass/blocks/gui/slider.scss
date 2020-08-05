@@ -23,6 +23,8 @@
   &--upper {
     width: 0;
   }
+
+  transition: width 1s;
 }
 
 .slider__img {
@@ -100,6 +102,12 @@
   background-color: $color-main;
 
   transform: translate(-50%, -50%);
+
+  transition: left 1s;
+
+  &--picked-up {
+    transition: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -107,7 +115,6 @@
     position: relative;
 
     height: $slider-height-tablet;
-    overflow: hidden;
 
     background-image: linear-gradient(to bottom, transparent $slider-bg-strip-height-tablet, $color-gray-242 $slider-bg-strip-height-tablet);
   }
