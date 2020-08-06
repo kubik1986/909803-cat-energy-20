@@ -40,6 +40,7 @@
   .example {
     position: relative;
     padding-top: 43px;
+    overflow: hidden;
 
     background-color: $color-white;
 
@@ -53,7 +54,7 @@
       height: $slider-height-tablet - $slider-bg-strip-height-tablet;
       content: "";
 
-      background-image: linear-gradient(to right, $color-gray-242 50%, $color-gray-234 50%);
+      background-color: $color-gray-242;
     }
   }
 
@@ -105,6 +106,7 @@
   .example__text-wrapper {
     margin-bottom: 0;
     padding-top: 54px;
+    padding-bottom: 50px;
     width: 436px;
   }
 
