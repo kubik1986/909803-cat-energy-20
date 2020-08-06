@@ -1,8 +1,12 @@
 .promo-card {
   position: relative;
 
-  display: block;
-  padding: 186px 55px 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 65px 55px 43px;
   width: 280px;
   min-height: 289px;
 
@@ -20,10 +24,6 @@
   }
 
   &::before {
-    position: absolute;
-    top: 65px;
-    left: 50%;
-
     display: block;
     width: 56px;
     height: 60px;
@@ -32,7 +32,20 @@
     background-image: url("../img/gift.svg");
     background-repeat: no-repeat;
 
-    transform: translateX(-50%);
+    transition: transform 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    &::before {
+      transform: scale(0.8);
+    }
   }
 }
 
@@ -44,7 +57,9 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .promo-card {
-    padding: 70px 17% 70px 25%;
+    flex-direction: row;
+
+    padding: 30px 17% 30px 12.5%;
     width: 100%;
     min-height: 200px;
 
@@ -55,48 +70,22 @@
     @media #{$retina} {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
-
-    &::before {
-      top: 50%;
-      left: 12.7%;
-
-      transform: translateY(-55%);
-    }
   }
 
   .promo-card__title {
-    margin-left: auto;
     width: 165px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .promo-card {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 65px 40px 43px;
     width: 245px;
 
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media #{$retina} {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
-    }
-
-    &::before {
-      transition: transform 0.3s;
-    }
-
-    &:hover,
-    &:focus {
-      &::before {
-        transform: translateX(-50%) scale(1.2);
-      }
-    }
-
-    &:active {
-      &::before {
-        transform: translateX(-50%) scale(0.8);
-      }
     }
   }
 }

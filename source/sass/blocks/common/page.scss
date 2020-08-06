@@ -13,6 +13,11 @@
   color: $color-gray-68;
 
   background-color: $color-white;
+
+  &--modal-opened {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 @media (min-width: $tablet-width) {
