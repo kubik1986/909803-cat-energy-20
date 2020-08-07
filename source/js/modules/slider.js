@@ -1,3 +1,4 @@
+/* ----- Скрипт компонента - слайдера ----- */
 'use strict';
 
 (function () {
@@ -5,6 +6,8 @@
     MIN: 0,
     MAX: 100
   };
+
+  const GRIP_GRABBED_CLASS = 'slider__grip--grabbed';
 
   window.Slider = function (obj) {
     this._element = obj.sliderElement; // контейнер слайдера
@@ -32,7 +35,8 @@
       let self = this;
 
       self.reset();
-      self._grip.addEventListener('mousedown', self._onGripMousedown.bind(self));
+      self._grip.addEventListener('mousedown', self._onSwipeStart.bind(self));
+      self._grip.addEventListener('touchstart', self._onSwipeStart.bind(self));
       self._grip.addEventListener('keydown', self._onGripKeyDown.bind(self));
       self._buttons.forEach(function (button) {
         button.addEventListener('click', self._onButtonClick.bind(self));
@@ -48,19 +52,25 @@
       this._cb(this._value);
     },
 
-    _onGripMousedown: function (evt) {
-      evt.preventDefault();
+    _getEvent: function () {
+      return event.type.search('touch') !== -1 ? event.touches[0] : event;
+    },
+
+    _onSwipeStart: function () {
       let self = this;
+      let evt = self._getEvent();
       let startX = evt.clientX;
       let gripLeftOffsetPerPixel = (GripLeftPositionLimit.MAX - GripLeftPositionLimit.MIN) / self._scale.offsetWidth;
+
+      self._grip.classList.add(GRIP_GRABBED_CLASS);
 
       self._clientXCoordinateLimit = {
         min: self._scale.getBoundingClientRect().left,
         max: self._scale.getBoundingClientRect().left + self._scale.offsetWidth
       };
 
-      const onMouseMove = function (moveEvt) {
-        moveEvt.preventDefault();
+      const _onSwipeAction = function () {
+        let moveEvt = self._getEvent();
         let shiftX = startX - moveEvt.clientX;
 
         startX = moveEvt.clientX;
@@ -82,14 +92,19 @@
         self._updateValue(left);
       };
 
-      const onMouseUp = function (upEvt) {
-        upEvt.preventDefault();
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mouseup', onMouseUp);
+      const _onSwipeEnd = function () {
+        document.removeEventListener('mousemove', _onSwipeAction);
+        document.removeEventListener('mouseup', _onSwipeEnd);
+        document.removeEventListener('touchmove', _onSwipeAction);
+        document.removeEventListener('touchend', _onSwipeEnd);
+
+        self._grip.classList.remove(GRIP_GRABBED_CLASS);
       };
 
-      document.addEventListener('mousemove', onMouseMove);
-      document.addEventListener('mouseup', onMouseUp);
+      document.addEventListener('mousemove', _onSwipeAction);
+      document.addEventListener('mouseup', _onSwipeEnd);
+      document.addEventListener('touchmove', _onSwipeAction);
+      document.addEventListener('touchend', _onSwipeEnd);
     },
 
     _onGripKeyDown: function (evt) {
@@ -101,6 +116,7 @@
     },
 
     _onButtonClick: function (evt) {
+      evt.preventDefault();
       let value = +evt.target.dataset.sliderValue;
       this.setValue(value);
       evt.target.blur();

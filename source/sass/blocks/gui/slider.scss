@@ -105,9 +105,15 @@
 
   transition: left 1s;
 
-  &:focus,
-  &:active {
+  user-select: none;
+
+  &--grabbed,
+  &:focus {
     transition: none;
+  }
+
+  &:active {
+    outline: none;
   }
 }
 
