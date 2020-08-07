@@ -1,17 +1,9 @@
-/* ----- Интерактивная карта ----- */
 'use strict';
 
 (function () {
   const mapElement = document.getElementById('map');
 
   if (mapElement) {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-    const BREAKPOINTS = {
-      "tablet": 768,
-      "desktop": 1300,
-    };
-
     const mapParams = {
       'mobile': {
         'zoom': 15,
@@ -42,7 +34,7 @@
     const FIRM_COORDS = [59.9385645248735, 30.323183542781184];
 
     let myMap;
-    let viewport = "mobile";
+    let viewport;
     const mapHeightMobile = 362;  //px
     const minPadding = 40;  // отступ, необходимый для возможности прокрутки карты на устройстве, px
 
@@ -56,19 +48,6 @@
       }
     }
 
-    function getViewport() {
-      let viewportWidth = window.innerWidth;
-      let viewport;
-      if (viewportWidth < BREAKPOINTS.tablet) {
-        viewport = "mobile";
-      } else if (viewportWidth >= BREAKPOINTS.tablet && viewportWidth < BREAKPOINTS.desktop) {
-        viewport = "tablet";
-      } else {
-        viewport = "desktop";
-      }
-      return viewport;
-    }
-
     function addPlacemark(map) {
       let myPlacemark = new ymaps.Placemark(FIRM_COORDS, {}, {
         iconLayout: 'default#image',
@@ -80,9 +59,9 @@
     }
 
     function onWindowResize(map) {
-      let newViewport = getViewport();
+      let newViewport = window.utils.getViewport();
 
-      if (isMobile) {
+      if (window.utils.isMobile) {
         checkMobileHeight();
       }
 
@@ -96,11 +75,11 @@
     }
 
     function init() {
-      if (isMobile) {
+      if (window.utils.isMobile) {
         checkMobileHeight();
       }
 
-      viewport = getViewport();
+      viewport = window.utils.getViewport();
 
       myMap = new ymaps.Map('map', {
         center: mapParams[viewport].center,

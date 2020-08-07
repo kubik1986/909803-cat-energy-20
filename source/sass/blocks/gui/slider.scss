@@ -105,7 +105,8 @@
 
   transition: left 1s;
 
-  &--picked-up {
+  &:focus,
+  &:active {
     transition: none;
   }
 }
@@ -155,6 +156,7 @@
     &:hover,
     &:focus {
       border-bottom: 1px solid rgba($color-black, 0.4);
+      outline: none;
     }
 
     &:active {
@@ -206,6 +208,7 @@
 
     &:hover {
       box-shadow: 0 2px 4px 0 rgba($color-black, 0.19);
+      cursor: grab;
     }
 
     &:active,
@@ -213,6 +216,7 @@
       border-color: $color-main;
       box-shadow: 0 3px 5px 0 rgba($color-black, 0.2);
       outline: none;
+      cursor: grabbing;
     }
   }
 }

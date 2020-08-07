@@ -150,16 +150,16 @@
               </div>
             </div>
             <div class="slider__controls">
-              <input class="slider__input js-slider-input" type="number" name="slider-level" value="50" min="0" max="100">
-              <button class="slider__btn js-slider-btn-before" type="button">Было</button>
+              <input class="slider__input" type="number" name="slider-level" value="50" min="0" max="100">
+              <button class="slider__btn" data-slider-value="0" type="button">Было</button>
               <div class="slider__range">
                 <div class="slider__inner-range">
-                  <div class="slider__grip js-slider-grip" tabindex="0">
+                  <div class="slider__grip" tabindex="0">
                     <span class="visually-hidden">Ручка переключателя было/стало</span>
                   </div>
                 </div>
               </div>
-              <button class="slider__btn js-slider-btn-after" type="button">Стало</button>
+              <button class="slider__btn" data-slider-value="100" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -216,7 +216,11 @@
     </footer>
 
     <script src="https://api-maps.yandex.ru/2.1.73/?apikey=4d67490a-4409-4ab6-ac55-f78701106175&lang=ru_RU"></script>
-    <script src="js/modules/mobile-menu.js"></script>
+    <script src="js/modules/utils.js"></script>
+    <script src="js/modules/main-nav.js"></script>
     <script src="js/modules/map.js"></script>
+    <script src="js/modules/slider.js"></script>
+    <script src="js/modules/two-image-slider.js"></script>
+    <script src="js/modules/main.js"></script>
   </body>
 </html>
