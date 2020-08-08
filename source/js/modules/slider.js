@@ -99,6 +99,7 @@
         document.removeEventListener('touchend', _onSwipeEnd);
 
         self._grip.classList.remove(GRIP_GRABBED_CLASS);
+        self._grip.blur();
       };
 
       document.addEventListener('mousemove', _onSwipeAction);
