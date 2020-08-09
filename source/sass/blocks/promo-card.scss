@@ -23,30 +23,27 @@
     background-image: url("../img/bg-gift-photo-mobile@2x.jpg");
   }
 
-  &::before {
-    display: block;
-    width: 56px;
-    height: 60px;
-    content: "";
-
-    background-image: url("../img/gift.svg");
-    background-repeat: no-repeat;
-
-    transition: transform 0.3s;
-  }
-
   &:hover,
   &:focus {
-    &::before {
+    .promo-card__icon {
       transform: scale(1.2);
     }
   }
 
   &:active {
-    &::before {
+    .promo-card__icon {
       transform: scale(0.8);
     }
   }
+}
+
+.promo-card__icon {
+  width: 56px;
+  height: 60px;
+
+  fill: currentColor;
+
+  transition: transform 0.3s;
 }
 
 .promo-card__title {

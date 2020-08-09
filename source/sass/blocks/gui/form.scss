@@ -92,7 +92,6 @@
     &:focus {
       + .form__icon {
         fill: $color-main;
-        background-color: $color-main;
       }
     }
   }
@@ -118,7 +117,6 @@
 
     + .form__icon {
       fill: $color-error;
-      background-color: $color-error;
     }
   }
 
@@ -133,7 +131,6 @@
   right: 15px;
 
   fill: $color-gray-34;
-  background-color: $color-gray-34;
 
   transform: translateY(-50%);
 }
