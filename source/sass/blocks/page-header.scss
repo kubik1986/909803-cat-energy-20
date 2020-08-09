@@ -73,13 +73,13 @@
         content: "";
 
         background-color: $color-photo-background-left;
-        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-image: url("../img/bg-index-background-desktop@1x.jpg");
         background-repeat: no-repeat;
         background-position: left -2px;
         background-size: 720px 696px;
 
         @media #{$retina} {
-          background-image: url("../img/index-background-desktop@2x.jpg");
+          background-image: url("../img/bg-index-background-desktop@2x.jpg");
         }
       }
 

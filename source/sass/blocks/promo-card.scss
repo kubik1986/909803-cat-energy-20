@@ -15,38 +15,35 @@
   color: $color-white;
 
   background-color: $color-main;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/bg-gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media #{$retina} {
-    background-image: url("../img/gift-photo-mobile@2x.jpg");
-  }
-
-  &::before {
-    display: block;
-    width: 56px;
-    height: 60px;
-    content: "";
-
-    background-image: url("../img/gift.svg");
-    background-repeat: no-repeat;
-
-    transition: transform 0.3s;
+    background-image: url("../img/bg-gift-photo-mobile@2x.jpg");
   }
 
   &:hover,
   &:focus {
-    &::before {
+    .promo-card__icon {
       transform: scale(1.2);
     }
   }
 
   &:active {
-    &::before {
+    .promo-card__icon {
       transform: scale(0.8);
     }
   }
+}
+
+.promo-card__icon {
+  width: 56px;
+  height: 60px;
+
+  fill: currentColor;
+
+  transition: transform 0.3s;
 }
 
 .promo-card__title {
@@ -65,10 +62,10 @@
 
     text-align: left;
 
-    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-image: url("../img/bg-gift-photo-tablet@1x.jpg");
 
     @media #{$retina} {
-      background-image: url("../img/gift-photo-tablet@2x.jpg");
+      background-image: url("../img/bg-gift-photo-tablet@2x.jpg");
     }
   }
 
@@ -82,10 +79,10 @@
     padding: 65px 40px 43px;
     width: 245px;
 
-    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-image: url("../img/bg-gift-photo-desktop@1x.jpg");
 
     @media #{$retina} {
-      background-image: url("../img/gift-photo-desktop@2x.jpg");
+      background-image: url("../img/bg-gift-photo-desktop@2x.jpg");
     }
   }
 }

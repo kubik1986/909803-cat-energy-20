@@ -2,7 +2,7 @@
   position: relative;
 
   display: inline-block;
-  padding-right: 50px;
+  padding-right: 48px;
 
   @include font(16px, 16px, 400);
   font-family: $font-secondary;
@@ -12,7 +12,7 @@
   &::after {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 8px;
 
     display: block;
     width: 24px;
@@ -32,7 +32,7 @@
   &:hover,
   &:focus {
     &::after {
-      right: 2px;
+      right: 0;
 
       width: 32px;
     }
@@ -45,7 +45,7 @@
 
 @media (min-width: $tablet-width) {
   .link-arrow {
-    padding-right: 60px;
+    padding-right: 58px;
 
     font-size: 20px;
     line-height: 30px;

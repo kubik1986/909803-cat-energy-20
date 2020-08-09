@@ -8,7 +8,7 @@
   color: $color-white;
 
   background-color: $color-photo-background-right;
-  background-image: url("../img/index-background-mobile@1x.jpg"),
+  background-image: url("../img/bg-index-background-mobile@1x.jpg"),
     linear-gradient(to top, $color-white 197px, transparent 197px),
     linear-gradient(to right, $color-photo-background-left 50%, $color-photo-background-right 50%);
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
   background-size: 320px, auto, auto;
 
   @media #{$retina} {
-    background-image: url("../img/index-background-mobile@2x.jpg"),
+    background-image: url("../img/bg-index-background-mobile@2x.jpg"),
       linear-gradient(to top, $color-white 197px, transparent 197px),
       linear-gradient(to right, $color-photo-background-left 50%, $color-photo-background-right 50%);
   }
@@ -56,7 +56,7 @@
   .intro {
     z-index: 1;
 
-    padding-top: 34px;
+    padding-top: 40px;
     padding-bottom: 0;
 
     text-align: left;
