@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preconnect" href="//api-maps.yandex.ru">
+    <link rel="dns-prefetch" href="//api-maps.yandex.ru">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Кэт энерджи</title>
   </head>
@@ -247,7 +251,7 @@
             </li>
           </ul>
           <div class="page-footer__copyright copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener" target="_blank">
               <span class="copyright__text">HTML Academy</span>
               <svg class="copyright__logo" width="27" height="34" role="img" focusable="false" aria-label="Логотип «HTMLacademy». Переход на страницу профессионального онлайн‑курса 'HTML и CSS. Адаптивная верстка и автоматизация'">
                 <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"/>
@@ -258,7 +262,7 @@
       </div>
     </footer>
 
-    <script src="https://api-maps.yandex.ru/2.1.73/?apikey=4d67490a-4409-4ab6-ac55-f78701106175&lang=ru_RU"></script>
+    <script src="https://api-maps.yandex.ru/2.1.73/?load=package.standard&apikey=4d67490a-4409-4ab6-ac55-f78701106175&lang=ru_RU"></script>
     <script src="js/app.min.js"></script>
   </body>
 </html>
