@@ -59,27 +59,7 @@
       map.geoObjects.add(myPlacemark);
     }
 
-    function onWindowResize(map) {
-      let newViewport = window.utils.getViewport();
-
-      if (window.utils.isMobile) {
-        checkMobileHeight();
-      }
-
-      if (newViewport !== viewport) {
-        viewport = newViewport;
-        map.setZoom(mapParams[viewport].zoom);
-        map.panTo(mapParams[viewport].center);
-        map.geoObjects.removeAll();
-        addPlacemark(map);
-      }
-    }
-
     function init() {
-      if (window.utils.isMobile) {
-        checkMobileHeight();
-      }
-
       viewport = window.utils.getViewport();
 
       myMap = new ymaps.Map('map', {
@@ -93,11 +73,50 @@
       myMap.behaviors.disable(['scrollZoom']);
 
       addPlacemark(myMap);
+
+      if (window.utils.isMobile) {
+        checkMobileHeight();
+        myMap.container.fitToViewport();
+      }
+
+      window.addEventListener('resize', function () {
+        onWindowResize(myMap);
+      });
     }
 
-    ymaps.ready(init);
-    window.addEventListener('resize', function () {
-      onWindowResize(myMap);
-    });
+    function onWindowScroll() {
+      let mapTop = mapElement.getBoundingClientRect().top + window.pageYOffset;
+      let posTop = window.pageYOffset;
+      let clientHeight = document.documentElement.clientHeight;
+      if (posTop + clientHeight > mapTop) {
+        window.removeEventListener('scroll', onWindowScroll);
+        let script = document.createElement('script');
+        script.src = "https://api-maps.yandex.ru/2.1.73/?load=package.standard&apikey=4d67490a-4409-4ab6-ac55-f78701106175&lang=ru_RU&onload=window.map.init";
+        document.body.appendChild(script);
+      }
+    }
+
+    function onWindowResize(map) {
+      let newViewport = window.utils.getViewport();
+
+      if (window.utils.isMobile) {
+        checkMobileHeight();
+        map.container.fitToViewport();
+      }
+
+      if (newViewport !== viewport) {
+        viewport = newViewport;
+        map.setZoom(mapParams[viewport].zoom);
+        map.panTo(mapParams[viewport].center);
+        map.geoObjects.removeAll();
+        addPlacemark(map);
+        map.container.fitToViewport();
+      }
+    }
+
+    window.map.init = init;
+
+    window.addEventListener('scroll', onWindowScroll);
+    onWindowScroll();
   }
 })();
