@@ -14,6 +14,7 @@ const concat = require('gulp-concat');
 const order = require('gulp-order');
 const uglify = require('gulp-terser');
 const del = require('del');
+const htmlmin = require('gulp-htmlmin');
 const ghPages = require('gh-pages');
 
 // Images
@@ -70,6 +71,9 @@ exports.sprite = sprite;
 
 const html = () => {
   return src('source/*.html')
+  .pipe(htmlmin(
+    {collapseWhitespace: true}
+  ))
   .pipe(dest('build'));
 }
 
@@ -115,6 +119,7 @@ const jsMin = () => {
     'source/js/app.js',
     'source/js/lib/**/*.js'
   ])
+    .pipe(plumber())
     .pipe(uglify())
     .pipe(rename(function (path) {
       path.basename += '.min';
