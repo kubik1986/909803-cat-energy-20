@@ -88,7 +88,8 @@
       let mapTop = mapElement.getBoundingClientRect().top + window.pageYOffset;
       let posTop = window.pageYOffset;
       let clientHeight = document.documentElement.clientHeight;
-      if (posTop + clientHeight > mapTop) {
+
+      if (posTop + 2 * clientHeight > mapTop) {  // карта начинает загружаться, когда страница прокручена вниз и до блока карты по высоте остается менее одного экрана
         window.removeEventListener('scroll', onWindowScroll);
         let script = document.createElement('script');
         script.src = "https://api-maps.yandex.ru/2.1.73/?load=package.standard&apikey=4d67490a-4409-4ab6-ac55-f78701106175&lang=ru_RU&onload=window.map.init";
